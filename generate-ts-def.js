@@ -16,8 +16,8 @@ ${
   TAG_NAMES.reduce((accum, tag) => `${accum}
 export function ${tag}(...children: ReactNode[]): ReactElement<any>;
 export function ${tag}(selector: string, ...children: ReactNode[]): ReactElement<any>;
-export function ${tag}(selector: string, properties: HTMLAttributes, ...children: ReactNode[]): ReactElement<any>;
-export function ${tag}(properties: HTMLAttributes, ...children: ReactNode[]): ReactElement<any>;`
+export function ${tag}(selector: string, properties: HTMLAttributes<any>, ...children: ReactNode[]): ReactElement<any>;
+export function ${tag}(properties: HTMLAttributes<any>, ...children: ReactNode[]): ReactElement<any>;`
   , ``)
 }`;
 
